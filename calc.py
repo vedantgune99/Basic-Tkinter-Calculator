@@ -57,7 +57,7 @@ buttonGrid1.pack(fill=X, side=TOP, padx=10)
 
 # Second Row of buttons.
 buttonGrid2 = Frame(screen)
-Button(buttonGrid2, text="%", width=6, height=3, command=lambda: press("%")).pack(
+Button(buttonGrid2, text="%", width=6, height=3, command=lambda: press("/100*")).pack(
     side=RIGHT, fill=X, padx=4, pady=4)
 
 Button(buttonGrid2, text="x", width=6, height=3, command=lambda: press("*")).pack(
@@ -77,7 +77,7 @@ buttonGrid2.pack(fill=X, side=TOP, padx=10)
 
 # Third Row of buttons.
 buttonGrid3 = Frame(screen)
-Button(buttonGrid3, text="x^2", width=6, height=3, command=lambda: press("x^2")).pack(
+Button(buttonGrid3, text="x^2", width=6, height=3, command=lambda: press("**2")).pack(
     side=RIGHT, fill=X, padx=4, pady=4)
 
 Button(buttonGrid3, text="-", width=6, height=3, command=lambda: press("-")).pack(
