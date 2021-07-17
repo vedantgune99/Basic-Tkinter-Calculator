@@ -6,7 +6,7 @@ expression = " "
 def press(n):
     global expression
     if n == "c":
-        entryText.set()
+        entryText.set(" ")
         expression = " "
     else:
         expression += n
@@ -15,7 +15,10 @@ def press(n):
 
 def calculate():
     global expression
-    print(eval(expression))
+    try:
+        entryText.set(eval(expression))
+    except:
+        entryText.set("Unexpected Error!")
 
 
 # Initial Window Design...
@@ -57,7 +60,7 @@ buttonGrid2 = Frame(screen)
 Button(buttonGrid2, text="%", width=6, height=3, command=lambda: press("%")).pack(
     side=RIGHT, fill=X, padx=4, pady=4)
 
-Button(buttonGrid2, text="x", width=6, height=3, command=lambda: press("x")).pack(
+Button(buttonGrid2, text="x", width=6, height=3, command=lambda: press("*")).pack(
     side=RIGHT, fill=X, padx=4, pady=4)
 
 Button(buttonGrid2, text="6", width=6, height=3, command=lambda: press("6")).pack(
