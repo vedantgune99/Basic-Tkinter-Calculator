@@ -24,7 +24,7 @@ def calculate():
 # Initial Window Design...
 screen = Tk()
 screen.geometry("439x378")
-screen.title("Calculator")
+screen.title("Basic Calculator")
 # screen.iconbitmap('calculator-icon.ico') - On windows you can use this .ico icon
 entryText = StringVar()
 
