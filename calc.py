@@ -25,7 +25,9 @@ def calculate():
 screen = Tk()
 screen.geometry("439x378")
 screen.title("Calculator")
+# screen.iconbitmap('calculator-icon.ico') - On windows you can use this .ico icon
 entryText = StringVar()
+
 
 # Display of calculator...
 display = Frame(screen)
@@ -77,7 +79,7 @@ buttonGrid2.pack(fill=X, side=TOP, padx=10)
 
 # Third Row of buttons.
 buttonGrid3 = Frame(screen)
-Button(buttonGrid3, text="x^2", width=6, height=3, command=lambda: press("**2")).pack(
+Button(buttonGrid3, text="x²", width=6, height=3, command=lambda: press("**2")).pack(
     side=RIGHT, fill=X, padx=4, pady=4)
 
 Button(buttonGrid3, text="-", width=6, height=3, command=lambda: press("-")).pack(
